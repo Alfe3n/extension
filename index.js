@@ -6,8 +6,6 @@ const save_btn_el=document.getElementById("save_btn")
 const delete_btn_el=document.getElementById("delete_btn")
 const savetab_btn_el=document.getElementById("savetab_btn")
 const tabs=[]
-
-
 savetab_btn_el.addEventListener("click",function(){
   chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
     myLeads.push(tabs[0].url);
@@ -21,8 +19,6 @@ const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"))
     {
       myLeads=leadsFromLocalStorage
     render(myLeads) 
-
-    
     }
     
 function render(Leads){
